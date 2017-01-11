@@ -20,9 +20,9 @@ function create(){
 	//Enables input for the bubble such as clicks etc. 
 	bubble1.inputEnabled = true; 
 
-	//Adds a text field dto the div called text in our html. This is where the score will show. 
-	text = game.add.text(250, 16, 'text', { fill: '#ffffff' });
-
+	//Adds a text field into our game that is blank to start. This will eventually hold the number of times we clicked. 
+	text = game.add.text(250, 16, '', { fill: '#ffffff' });
+	//When a bubble is clicked or touched, run the incrememnt function. 
 	bubble1.events.onInputDown.add(increment, this);
 }
 
